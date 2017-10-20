@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
+
 
     <title>Github Analytics</title>
 
@@ -55,9 +57,9 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h1 class="brand-heading">Github Analytics</h1>
-              <p class="intro-text">An analysis of GitHub pull requests.
-                <br>Design by Start Bootstrap.</p>
+              <h1 class="brand-heading">AngularJS pull requests</h1>
+              <p class="intro-text">An analysis of GitHub pull requests to the AngularJS repository.
+                </p>
               <a href="#about" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
               </a>
@@ -67,31 +69,31 @@
       </div>
     </header>
 
-    <!-- About Section -->
+    <!-- Get started Section -->
     <section id="about" class="content-section text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>About Grayscale</h2>
-            <p>Grayscale is a free aldo theme created by Start Bootstrap. It can be yours right now, simply download the template on
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-            <p>This theme features stock photos by
-              <a href="http://gratisography.com/">Gratisography</a>
-              along with a custom Google Maps skin courtesy of
-              <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-            <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with SASS and LESS files for easy customization!</p>
+            <h2>Welcome to our TWEB project! </h2>
+			<h4>Every hour, we retrieve all pull requests to the AngularJS Github repository and update our graphs.</h4>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Download Section -->
-    <section id="download" class="download-section content-section text-center">
+	<!-- Github Analysis Section -->
+    <section id="analysis" class="content-section text-center">
       <div class="container">
-        <div class="col-lg-8 mx-auto">
-          <h2>Download Grayscale</h2>
-          <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-          <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+		    <h1> Number of pull requests over time </h1>
+			<canvas id="requestsOverTime" width="400" height="400"></canvas>
+		    <h1> Time elapsed before closing </h1>
+			<canvas id="timeBeforeClosed" width="400" height="400"></canvas>
+			<h1> These pull requests have been open more than the median amount of time! </h1>
+			<canvas id="requestsOpenTooLong" width="400" height="400"></canvas>
+
+          </div>
         </div>
       </div>
     </section>
@@ -115,6 +117,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
+	
+    <!-- Chart.js script to build graphs and tables -->
+	<script src="js/analytics.js"></script>
+
 
   </body>
 
