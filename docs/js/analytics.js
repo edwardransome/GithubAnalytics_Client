@@ -21,6 +21,7 @@ function graphData() {
   const ctx3Data = [];
 
   const n = data.length;
+  let mean = 0;
   // eslint says that document is not defined but when analytics.js is runned from
   // an .html, document is define.
   document.getElementById('numberOfPullRequests').innerHTML = n;
@@ -46,9 +47,12 @@ function graphData() {
 
     if (data[i].state === 'open') {
       ctx3Data.push(data[i]);
+    }else{
+      mean += data[i].duration;      
     }
   }
 
+  document.getElementById('averageTime').innerHTML += Math.ceil(mean/n) + " days.";
   ctx3Data.sort((a, b) => a.duration < b.duration);
 
   const openTooLongTable = document.getElementById('openTooLong');
@@ -64,7 +68,6 @@ function graphData() {
   }
 
   const ctx2 = document.getElementById('timeBeforeClosed').getContext('2d');
-
   const timeBeforeClosed = new Chart(ctx2, {
     type: 'bar',
     data: {
