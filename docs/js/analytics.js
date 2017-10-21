@@ -63,31 +63,8 @@ function graphData() {
     duration.innerHTML = ctx3Data[i].duration;
   }
 
-
-  const ctx1 = document.getElementById('requestsOverTime').getContext('2d');
   const ctx2 = document.getElementById('timeBeforeClosed').getContext('2d');
 
-  const requestsOverTime = new Chart(ctx1, {
-    type: 'bar',
-    data: {
-      datasets: [{
-        label: 'Creation date',
-        data: ctx1Data,
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-        ],
-      }],
-    },
-    options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true,
-          },
-        }],
-      },
-    },
-  });
   const timeBeforeClosed = new Chart(ctx2, {
     type: 'bar',
     data: {

@@ -39,6 +39,13 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">Welcome</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#info">Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#analysis">Analysis</a>
+            </li>
+
           </ul>
         </div>
       </div>
@@ -75,29 +82,39 @@
     </section>
 
 	<!-- Github Analysis Section -->
-    <section id="analysis" class="content-section text-center">
+    <section id="info" class="content-section text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
         <h1>There are currently </h1>
         <h1 id="numberOfPullRequests"> 0 (loading...)</h1>
         <h1> pull requests analysed.</h1>
-		    <h1> Number of pull requests over time </h1>
-			<canvas id="requestsOverTime" width="400" height="400"></canvas>
-		    <h1> Graph of time pull request stayed open before closing </h1>
-			<canvas id="timeBeforeClosed" width="400" height="400"></canvas>
-			<h1> These are the 10 pull requests that have been open the longest. They should be taken care of as soon as possible. </h1>
-      <table id="openTooLong" style="width:90%" >
-          <tr>
-            <th align="center">Pull request title</th>
-            <th align="center">Date opened</th>
-            <th align="center">Days open</th>
-          </tr>
-        </table>
           </div>
         </div>
       </div>
     </section>
+
+	<!-- Github Analysis Section -->
+  <section id="analysis" class="content-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1> Graph of time pull request stayed open before closing </h1>
+          <canvas id="timeBeforeClosed" width="400" height="400"></canvas>
+          <br><br>
+          <h1> These are the 10 pull requests that have been open the longest. They should be taken care of as soon as possible. </h1>
+          <table id="openTooLong" style="width:90%" >
+              <tr>
+                <th align="center">Pull request title</th>
+                <th align="center">Date opened</th>
+                <th align="center">Days open</th>
+              </tr>
+            </table>
+              </div>
+      </div>
+    </div>
+  </section>
+
 
 
     <!-- Footer -->
