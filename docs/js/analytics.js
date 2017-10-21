@@ -17,7 +17,9 @@ readTextFile("./test.json", function(text){
     console.log(data);
 });
 
-var ctx1_data = [12,4,76,2,43,90];
+var ctx1_data = []
+var ctx2_data = [0,0,0,0,0,0];
+
 /*
 for(var i = 0; i < data.length; i++){
     a = data[3] - data[2];
@@ -34,6 +36,7 @@ for(var i = 0; i < data.length; i++){
     }else{
         ctx1_data[5]++;
     }
+    ctx2_data[i] = 
 }
 */
 var ctx1 = document.getElementById("requestsOverTime").getContext('2d');
@@ -46,7 +49,7 @@ var timeBeforeClosed = new Chart(ctx2, {
         labels: ["Under 24h", "1-2 Days", "3-4 Days", "5-6 Days", "1 - 2 Weeks", "More than 2 Weeks"],
         datasets: [{
             label: 'Time before request was closed',
-            data: ctx1_data,
+            data: ctx2_data,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
