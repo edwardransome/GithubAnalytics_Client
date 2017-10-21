@@ -74,7 +74,7 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Welcome to our TWEB project! </h2>
-			<h4>Every hour, we retrieve all pull requests to the AngularJS Github repository and update our graphs.</h4>
+			<h4>Every day, we retrieve all pull requests to the AngularJS Github repository and update our graphs.</h4>
           </div>
         </div>
       </div>
@@ -85,13 +85,21 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
+        <h1>There are currently </h1>
+        <h1 id="numberOfPullRequests"> 0 </h1>
+        <h1> pull requests analysed.</h1>
 		    <h1> Number of pull requests over time </h1>
 			<canvas id="requestsOverTime" width="400" height="400"></canvas>
-		    <h1> Time elapsed before closing </h1>
+		    <h1> Graph of time pull request stayed open before closing </h1>
 			<canvas id="timeBeforeClosed" width="400" height="400"></canvas>
-			<h1> These pull requests have been open more than the median amount of time! </h1>
-			<canvas id="requestsOpenTooLong" width="400" height="400"></canvas>
-
+			<h1> These are the 10 pull requests that have been open the longest. They should be taken care of as soon as possible. </h1>
+      <table id="openTooLong" style="width:90%" >
+          <tr>
+            <th align="center">Pull Request title</th>
+            <th align="center">Date opened</th>
+            <th align="center">Days open</th>
+          </tr>
+        </table>
           </div>
         </div>
       </div>
